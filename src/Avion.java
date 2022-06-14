@@ -43,13 +43,36 @@ public class Avion implements Serializable {
 
     @Override
     public String toString() {
+        String opcionFlaps;
+        String opcionLandingGear;
+        String opcionEjectionSystem;
+        String opcionSeatOccupation;
+        if (flaps){
+            opcionFlaps = "Arriba";
+        }else{
+            opcionFlaps = "Abajo";
+        }
+        if (landingGear){
+            opcionLandingGear = "Arriba";
+        } else{
+            opcionLandingGear = "Abajo";
+        }
+        if (ejectionSystem){
+            opcionEjectionSystem = "Armado";
+        }else{
+            opcionEjectionSystem = "Desarmado";
+        }if (seatOccupation){
+            opcionSeatOccupation = "Verdadero";
+        }else{
+            opcionSeatOccupation = "Falso";
+        }
         return "---------------> F-18 <---------------\n" +
                 "fuelLevel = " + fuelLevel + "\n" +
                 "pilotCallSign = " + pilotCallSign + '\n' +
                 "squadNumber = " + squadNumber + '\n' +
-                "flaps = " + flaps + "\n" +
-                "landingGear = " + landingGear + "\n" +
-                "ejectionSystem = " + ejectionSystem + "\n" +
-                "seatOccupation = " + seatOccupation;
+                "flaps = " + opcionFlaps + "\n" +
+                "landingGear = " + opcionLandingGear + "\n" +
+                "ejectionSystem = " + opcionEjectionSystem + "\n" +
+                "seatOccupation = " + opcionSeatOccupation;
     }
 }
